@@ -12,4 +12,15 @@ pipeline{
             }
         }
     }
+    post {
+        always {
+            bat 'echo "Running Post Build Stages"'
+        }
+        success {
+            bat 'echo "Build went successful"'
+        }
+        failure{
+            bat 'echo "Failed to build project"'
+        }
+    }
 }
